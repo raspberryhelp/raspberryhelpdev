@@ -182,3 +182,41 @@
     border-right-color: var(--border);
   }
 }
+
+
+
+.container
+{
+  width: 980px;
+  height: 1012px;
+  padding: 20px;
+  background-color: #13080b;
+  border: 5px solid #40272e;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+
+}
+.navigation-bar
+{
+  max-width: 980px;
+  margin:20px;
+  padding:10px;
+  gap:10px;
+  background-color: #9a5f72;
+  color:#ceb0a7;
+  display:flex;
+  font-family: var(--mono);
+
+}
+.navigation-bar a {
+  text-decoration: none;
+    color:#f6f2f2;
+}
+.main-content
+{
+  margin:20px;
+  padding:5px;
+  background-color: #13080b;
+  height: 90%;
+}
