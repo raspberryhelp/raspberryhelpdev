@@ -1,0 +1,3 @@
+- [] All pages 
+- [] Projects details
+- [] Fancier UI 
