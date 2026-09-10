@@ -18,6 +18,7 @@ function About() {
       <div class = "about-container">
         <p>
           This site is mostly just a portfolio of my stuff, feel free to take a look around. This site is a WIP so there is nothing. It also looks basic because I haven't taken the time to like make it cooler idk
+          CURSOR IS FROM <a href='https://pixelmoondust.neocities.org/materials'>pixelmoondust from neocities</a> I INTEND TO REPLACE THIS WHEN I GET TIME OK BUT FOR THE TIME BEING THIS IS HERE
         </p>
       </div>
 
