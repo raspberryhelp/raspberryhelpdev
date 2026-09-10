@@ -1,49 +1,48 @@
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
-
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
-
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
+  --ink: #150c10;
+  --ink-2: #26141b;
+  --paper: #fbf6f2;
+  --text: #4a3037;
+  --text-h: #150c10;
+  --border: #e6d8d2;
+  --rose: #8a3f4d;
+  --rose-bg: rgba(138, 63, 77, 0.315);
+  --mute: #8c6f75;
+  --code-bg: #f2e6e0;
+  --shadow: rgba(21, 12, 16, 0.08) 0 10px 24px -8px;
+ 
+  --serif: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+  --sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+ 
+  font: 18px/155% var(--sans);
+  letter-spacing: 0.1px;
   color-scheme: light dark;
   color: var(--text);
-  background: var(--bg);
+  background: var(--paper);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+ 
   @media (max-width: 1024px) {
     font-size: 16px;
   }
-
 }
-
+ 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #efe3e3;
-    --text-h: #f3f4f6;
-    --bg: #3d2737;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #9a5f72;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+    --ink: #fbf6f2;
+    --ink-2: #26141b;
+    --paper: #150c10;
+    --text: #d8c3c8;
+    --text-h: #f7ecec;
+    --border: #3a232a;
+    --rose: #d99aa6;
+    --rose-bg: rgba(217, 154, 166, 0.12);
+    --mute: #9a7f86;
+    --code-bg: #1f1216;
+    --shadow: rgba(0, 0, 0, 0.4) 0 10px 24px -8px;
   }
 
   #social .button-icon {
@@ -51,12 +50,14 @@
   }
 }
 
+
 body {
   margin: 10px;
+  background: var(--paper);
 }
 
 #root {
-  width: 1126px;
+  width: 1180px;
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -69,9 +70,10 @@ body {
 
 h1,
 h2 {
-  font-family: var(--heading);
+  font-family: var(--serif);
   font-weight: 500;
   color: var(--text-h);
+  letter-spacing: -0.01em;
 }
 
 h1 {
@@ -95,7 +97,40 @@ h2 {
 p {
   margin: 0;
 }
+a {
+  color: var(--text-h);
+  text-decoration-color: var(--border);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s ease, color 0.2s ease;
+}
 
+a:hover,
+a:focus-visible {
+  color: var(--rose);
+  text-decoration-color: var(--rose);
+}
+ 
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--rose);
+  outline-offset: 3px;
+}
+ 
+code {
+  font-family: var(--mono);
+  font-size: 14px;
+  padding: 3px 7px;
+  border-radius: 4px;
+  background: var(--code-bg);
+  color: var(--text-h);
+}
+ 
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
 code,
 .counter {
   font-family: var(--mono);
