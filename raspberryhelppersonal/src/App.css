@@ -204,6 +204,21 @@
 
 
 }
+.footer-bar
+{
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 28px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 14px;
+  position:absolute;
+left:0;
+bottom:0;
+right:0;
+}
 .navigation-bar a {
   text-decoration: none;
   color:#f6f2f2;

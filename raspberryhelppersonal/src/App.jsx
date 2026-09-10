@@ -11,6 +11,7 @@ import Tools from "./pages/Tools";
 import Blog from "./pages/Blog";
 import Art from "./pages/Art";
 import Widgets from "./pages/Widgets"; 
+import Footer from './Footer';
 function PageContent() {
   const location = useLocation();
 
@@ -39,6 +40,7 @@ function App() {
         <div class = "main-content">
           <PageContent />
         </div>
+        <Footer></Footer>
       </div>
       </BrowserRouter>
     
