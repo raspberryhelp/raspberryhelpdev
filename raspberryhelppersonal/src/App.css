@@ -206,12 +206,14 @@
 }
 .navigation-bar a {
   text-decoration: none;
-    color:#f6f2f2;
+  color:#f6f2f2;
+  padding: 10px 15px;
 }
 
 .navigation-bar a:hover,
 .navigation-bar a:focus-visible {
   color: var(--rose);
+  text-shadow: 0 0 8px currentColor;
 }
  
 
