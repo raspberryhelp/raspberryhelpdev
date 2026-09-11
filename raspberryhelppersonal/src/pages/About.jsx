@@ -4,10 +4,10 @@ function About() {
   return (
     <div>
       <div class = "about-container">
-        <p style={{width: '250px', height: '250px', margin: '50px'}}>
+        <div className="profile-pic-wrap">
           <img src="https://i.pinimg.com/736x/1f/9f/68/1f9f68a53a9e39df3ee4067c823efd6b.jpg" width="250px"></img>
-        </p>
-        <p style={{width: '250px', height: '250px', margin:'50px', alignItems:'center'}}> 
+        </div>
+        <p className="about-text">
           ❖ Agnus Thomas<br/>
           ❖ Dallas, Texas<br/>
           ❖ Graduate student studying Computer Science at University of Texas at Dallas<br/>

@@ -54,6 +54,7 @@
 body {
   margin: 10px;
   background: var(--paper);
+  overflow-x: hidden;
 }
 
 #root {
@@ -147,4 +148,50 @@ code {
 }
 * {
     cursor: url('./assets/tempcursor.png'), auto;
+}
+ .nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-h);
+}
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+}
+.mobile-menu {
+  display: none;
+}
+ 
+
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+  .nav-toggle {
+    display: block;
+  }
+ .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px 16px;
+    box-sizing: border-box;
+   z-index: 100;}
+  .mobile-menu a {
+    margin-left: 0;
+    padding: 6px 0;
+  }
+  
 }
