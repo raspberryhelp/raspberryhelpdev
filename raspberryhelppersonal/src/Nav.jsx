@@ -1,6 +1,33 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
 import click from './assets/navtouch.wav';
+
+  function useTheme() {
+  const [theme, setTheme] = useState(() => {
+    const stored = localStorage.getItem('theme');
+    if (stored) return stored;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  return [theme, setTheme];
+}
+function ThemeToggle() {
+  const [theme, setTheme] = useTheme();
+  return (
+    <button
+      className="theme-toggle"
+      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      aria-label="Toggle dark mode"
+    >
+      {theme === 'dark' ? '☀' : '☾'}
+    </button>
+  );
+}
 
 function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -46,6 +73,7 @@ function Nav() {
           <Link to="/Widgets" onClick={handleLinkClick}>Widgets</Link>
         </div>
       )}
+      <ThemeToggle/>
     </div>
   );
 }

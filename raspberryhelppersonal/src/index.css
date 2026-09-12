@@ -31,7 +31,7 @@
 }
  
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme='light']) {
     --ink: #fbf6f2;
     --ink-2: #26141b;
     --paper: #150c10;
@@ -44,6 +44,19 @@
     --code-bg: #1f1216;
     --shadow: rgba(0, 0, 0, 0.4) 0 10px 24px -8px;
   }
+  :root[data-theme='dark'] {
+  --ink: #fbf6f2;
+  --ink-2: #26141b;
+  --paper: #150c10;
+  --text: #d8c3c8;
+  --text-h: #f7ecec;
+  --border: #3a232a;
+  --rose: #d99aa6;
+  --rose-bg: rgba(217, 154, 166, 0.12);
+  --mute: #9a7f86;
+  --code-bg: #1f1216;
+  --shadow: rgba(0, 0, 0, 0.4) 0 10px 24px -8px;
+}
 
   #social .button-icon {
     filter: invert(1) brightness(2);

@@ -244,7 +244,7 @@
 }
 .navigation-bar a {
   text-decoration: none;
-  color:#f6f2f2;
+  color:var(--text-h);
   padding: 10px 15px;
 }
 
@@ -254,6 +254,14 @@
   text-shadow: 0 0 8px currentColor;
 }
  
+.theme-toggle
+{
+  background:transparent;
+  color: var(--rose);
+  border: none;
+  font-size: 20px;
+  padding:0;
+}
 
 
 .main-content
