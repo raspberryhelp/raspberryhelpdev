@@ -328,10 +328,51 @@
   margin: 50px;
 }
 
+
+
+/* for tools */
+
+
+.toolCard {
+  width: 500px;
+  height: 350px;
+  border: none;
+  border-radius: 20px;
+  margin: 10px;
+  background: linear-gradient(160deg,var(--rose-bg) 50%,  transparent 30%), radial-gradient(circle,var(--rose-bg) 50%,  transparent 10%);
+  background-blend-mode: normal, normal;
+  padding: 40px 24px 24px;
+  text-align: center;
+
+}
+
+.toolCard:hover {
+  width: 500px;
+  height: 350px;
+  border: none;
+  border-radius: 20px;
+  margin: 10px;
+  background: linear-gradient( 160deg, transparent 50%, var(--rose-bg)  30%), radial-gradient(circle, transparent 50%,  var(--rose-bg) 10%);
+  background-blend-mode: normal, normal;
+
+}
+.toolTitle
+{
+  font-family: var(--mono);
+ margin-top: 20px;
+}
+
+
 @media (max-width: 700px) {
   .about-text {
     width: 100%;
     height: auto;
     margin: 20px 0;
   }
+  .toolCard, .toolCard:hover {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+  }
+  
 }
