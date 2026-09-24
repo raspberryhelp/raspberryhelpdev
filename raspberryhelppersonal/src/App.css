@@ -345,7 +345,6 @@
   text-align: center;
   box-shadow: 0 10px 0px var(--rose-bg);
   text-shadow: 0px 5px 15px;
-
 }
 
 .toolCard:hover {
@@ -353,12 +352,15 @@
   height: 350px;
   border: none;
   border-radius: 20px;
-  margin: 15px 10px 10px 15px;
+  margin: 15px;
   background: linear-gradient( 160deg, transparent 50%, var(--rose-bg)  30%), radial-gradient(circle, transparent 50%,  var(--rose-bg) 10%);
   background-blend-mode: normal, normal;
-  box-shadow: 0 5px 0px var(--rose-bg);
+  box-shadow: 0 10px 0px var(--rose-bg);
   text-shadow: 0px 5px 15px;
 
+}
+.toolCard a {
+  text-decoration: none;
 }
 .toolTitle
 {
@@ -381,7 +383,7 @@
     width: 100%;
     height: auto;
     margin: 20px 0;
-    padding: 0;
+    padding: 0 0 0 20px;
     text-align: left;
     box-shadow: 0 5px 0px var(--rose-bg);
     text-shadow: none;
@@ -396,4 +398,34 @@
   {
     font-weight:lighter;
   }
+}
+
+/* for projects */
+.project-status.ongoing {
+  width: auto;
+  height: auto;
+  border: none;
+  border-radius: 20px;
+  margin: 15px;
+  background: linear-gradient( 90deg, rgba(196, 146, 102, 100) 30%, transparent 80%);
+  background-blend-mode: normal;
+}
+.project-status.done {
+  width: auto;
+  height: auto;
+  border: none;
+  border-radius: 20px;
+  margin: 15px;
+  background: linear-gradient( 90deg, rgba(102, 196, 111, 100) 30%, transparent 80%);
+  background-blend-mode: normal;
+}
+
+.technologies
+{
+   display: flex;
+  flex-direction: row;      
+  flex-wrap: wrap;         
+  gap: 24px;                
+  justify-content: center;  
+  padding: 20px;
 }
