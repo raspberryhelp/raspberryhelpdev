@@ -1,3 +1,4 @@
+
 export const projects = [
   {
     id: "personalsite",
@@ -13,7 +14,6 @@ export const projects = [
 {
   id: "voronoikmeans",
   title: "K-means Voronoi",
-
   description: (
     <>
       <p>
@@ -27,6 +27,13 @@ export const projects = [
         Mostly an excuse to delve a bit into GIS, but I also learned
         a lot about data processing.
       </p>
+      <a
+        href="/kmeans.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View PDF
+      </a>
     </>
   ),
 
