@@ -14,7 +14,7 @@ import Art from "./pages/Art";
 import Widgets from "./pages/Widgets"; 
 import Footer from './Footer';
 import ProjectDetails from "./pages/ProjectsDetails";
-
+import BlogDetails from "./pages/BlogDetails";
 function PageContent() {
   const location = useLocation();
 
@@ -27,8 +27,8 @@ function PageContent() {
         <Route path="/Blog" element={<Blog />} />
         <Route path="/Art" element={<Art />} />
         <Route path="/Widgets" element={<Widgets />} />
-        <Route path="/Projects/:projectId" element={<ProjectDetails />}
-/>
+        <Route path="/Projects/:projectId" element={<ProjectDetails />}/>
+        <Route path="/Blog/:blogId" element={<BlogDetails />}/>
       </Routes>
     </div>
   );
