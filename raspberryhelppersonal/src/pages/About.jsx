@@ -1,11 +1,15 @@
 import React from 'react'
+import mainpage from '../assets/mainpage.png'
+
 
 function About() {
   return (
     <div>
       <div class = "about-container">
         <div className="profile-pic-wrap">
-          <img src="https://i.pinimg.com/736x/1f/9f/68/1f9f68a53a9e39df3ee4067c823efd6b.jpg" width="250px"></img>
+          <img src={mainpage} width="250" alt="Main Page" />
+
+
         </div>
         <p className="about-text">
           ❖ Agnus Thomas<br/>
@@ -17,8 +21,7 @@ function About() {
 
       <div class = "about-container">
         <p>
-          This site is mostly just a portfolio of my stuff, feel free to take a look around. This site is a WIP so there is nothing. It also looks basic because I haven't taken the time to like make it cooler idk
-          CURSOR IS FROM <a href='https://pixelmoondust.neocities.org/materials'>pixelmoondust from neocities</a> I INTEND TO REPLACE THIS WHEN I GET TIME OK BUT FOR THE TIME BEING THIS IS HERE
+          I don't aim for perfectionism, I aim for beyond. <br></br>This is a portfolio site, feel free to look around. It's still in WIP. 
         </p>
       </div>
 

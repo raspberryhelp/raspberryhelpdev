@@ -160,7 +160,7 @@ code {
   background: var(--code-bg);
 }
 * {
-    cursor: url('./assets/tempcursor.png'), auto;
+    cursor: url('./assets/cursor.png'), auto;
 }
  .nav-toggle {
   display: none;
