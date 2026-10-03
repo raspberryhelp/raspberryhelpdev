@@ -556,3 +556,15 @@
   outline: none;
   border-color: var(--accent-border);
 }
+
+/* Light mode */
+::selection {
+  background-color: #d99aa6;
+  color: #26141b;
+}
+
+/* Dark mode */
+.dark ::selection {
+  background-color: #9a7f86;
+  color: #fbf6f2;
+}
