@@ -1,7 +1,7 @@
 export const blogs = [
     {
     id: 2,
-    title: "This site's almost done!",
+    title: "This site's almost done! test",
     date: "November 5, 2026",
 
     content: (
