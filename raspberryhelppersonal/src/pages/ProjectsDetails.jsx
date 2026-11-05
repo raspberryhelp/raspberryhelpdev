@@ -1,9 +1,14 @@
+import { useState } from "react";
+import { createPortal } from "react-dom";
 import { Link, useParams } from "react-router-dom";
+
 
 import { projects } from "../data/projectdata.jsx";
 
 function ProjectDetails() {
   const { projectId } = useParams();
+  const [zoomSrc, setZoomSrc] = useState(null);
+  
 
   const project = projects.find(
     (project) => project.id === projectId
@@ -26,9 +31,22 @@ function ProjectDetails() {
         {project.progress}
       </div>
 
-      <div className="project-description">
-        {project.description}
-      </div>
+          <div
+      className="project-description"
+      onClick={(e) => {
+        if (e.target.tagName === "IMG") setZoomSrc(e.target.src);
+      }}
+    >
+      {project.description}
+    </div>
+
+    {zoomSrc &&
+      createPortal(
+        <div className="lightbox" onClick={() => setZoomSrc(null)}>
+          <img src={zoomSrc} alt="" />
+        </div>,
+        document.body
+      )}
 
       <div className="toolTitle">Technologies</div>
 

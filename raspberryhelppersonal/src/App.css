@@ -420,14 +420,54 @@
   background-blend-mode: normal;
 }
 
-.technologies
-{
-   display: flex;
-  flex-direction: row;      
-  flex-wrap: wrap;         
-  gap: 24px;                
-  justify-content: center;  
+
+.project-description {
+  line-height: 1.7;
+  margin: 20px 0;
+}
+
+.project-description ul,
+.project-description ol {
+  width: fit-content;
+  max-width: 90%;
+  margin: 16px auto;
+  padding-left: 1.5em;
+}
+.project-description li {
+  margin: 6px 0;
+}
+.project-details {
+  max-width: 800px;
+  margin: 0 auto;
   padding: 20px;
+  text-align: left; /* #root centers everything otherwise */
+}
+.project-description img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 24px auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-start;
+  padding: 12px 0 20px;
+}
+
+.technologies span {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: var(--rose-bg);
+  color: var(--rose);
+  font-family: var(--mono);
+  font-size: 13px;
 }
 
 /* this will be changed when i get more time */
@@ -567,4 +607,28 @@
 .dark ::selection {
   background-color: #9a7f86;
   color: #fbf6f2;
+}
+
+
+.project-description img {
+  cursor: zoom-in;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.85);
+  cursor: zoom-out;
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
 }
